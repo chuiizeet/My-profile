@@ -4,6 +4,8 @@ import 'package:my_profile/model/company.dart';
 import 'package:my_profile/ui/company_details_intro_animation.dart';
 import 'dart:ui' as ui;
 
+import 'package:my_profile/ui/project_card.dart';
+
 class CompanyDetailsPage extends StatelessWidget {
 
   CompanyDetailsPage({
@@ -114,11 +116,59 @@ class CompanyDetailsPage extends StatelessWidget {
             fontWeight: FontWeight.bold
           ),
         ),
+        new Text(
+          company.location,
+          style: new TextStyle(
+            color: Colors.white.withOpacity(animation.locationOpacity.value),
+            fontWeight: FontWeight.w500
+          ),
+        ),
+        
+        //LineDivider
+        new Container(
+          color: Colors.white.withOpacity(0.8),
+          margin: const EdgeInsets.symmetric(vertical: 14.0),
+          width: animation.dividerWidth.value,
+          height: 1.0,
+        ),
+
+        new Text(
+          company.about,
+          style: new TextStyle(
+            color: Colors.white.withOpacity(animation.aboutOpacity.value),
+            height: 1.4,
+          ),
+        )
+
+
       ],
     ),
     );
     
+  }
 
+  Widget _createProjectScroller() {
+
+    return new Padding(
+      padding: const EdgeInsets.only(top: 14.0),
+      child: Transform(transform: new Matrix4.translationValues(animation.projectScrollerXTranslation.value,
+       0.0, 0.0),
+       child: new SizedBox.fromSize(
+         size: new Size.fromHeight(250),
+         child: ListView.builder(
+           scrollDirection: Axis.horizontal,
+           padding: const EdgeInsets.symmetric(horizontal: 5.0),
+           itemCount: company.projects.length,
+           itemBuilder: (BuildContext context, int index){
+
+             var project = company.projects[index];
+              return new ProjectCard(project);
+            
+           }),
+       ),
+       ),
+
+    );
 
 
   }
