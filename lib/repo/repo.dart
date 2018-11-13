@@ -6,9 +6,9 @@ class RepoData {
 
     name: 'JeguLabs',
     about: 
-    'Nuestra meta es crear juegos y aplicaciones que satisfagan a los usuarios y si no les gusta ni pedo.',
+    'Cupidatat reprehenderit eiusmod in in sit culpa laborum anim reprehenderit exercitation amet consectetur tempor fugiat. Occaecat officia laborum non veniam mollit anim et veniam. Cillum in cillum exercitation sunt ut sunt reprehenderit ex non.',
 
-    backdropPhoto: 'assets/darling.jpg',
+    backdropPhoto: 'assets/jeguDrop.png',
     projects: <Projects>[
 
       new Projects(
