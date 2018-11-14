@@ -4,7 +4,7 @@
 
 ### Plugins
 
-| Plugin | README |
+| Plugin | Url |
 | ------ | ------ |
 | url_launcher | https://pub.dartlang.org/packages/url_launcher |
 
