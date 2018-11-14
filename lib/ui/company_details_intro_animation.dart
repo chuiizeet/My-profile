@@ -63,9 +63,4 @@ class CompanyDetailsIntroAnimation {
   final Animation<double> projecScrollerOpacity;
 
 
-
-
-
-
-  
 }

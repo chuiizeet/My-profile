@@ -59,7 +59,8 @@ class CompanyDetailsPage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           _createLogoAvatar(),
-          _createAboutCompany()
+          _createAboutCompany(),
+          _createProjectScroller()
         ],
       ),
     );
