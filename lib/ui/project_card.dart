@@ -40,7 +40,6 @@ class ProjectCard extends StatelessWidget {
       ),
     );
 
-
   }
 
   Widget _createLinkButton() {
@@ -68,8 +67,48 @@ class ProjectCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+
+      width: 175.0,
+      padding: const EdgeInsets.all(10.0),
+      margin: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 15.0),
+      decoration: _createShadowRoundCorners(),
+
+      child: new Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+
+          Flexible(
+            flex: 3,
+            child: _createThumbnail()),
+
+          Flexible(
+            flex: 2,
+            child: _createInfo())
+
+
+
+        ],
+      ),
       
     );
+  }
+
+  Widget _createInfo() {
+
+    return new Padding(
+
+      padding: const EdgeInsets.only(top: 18.0, right: 4.0, left: 4.0),
+      child: new Text(
+        project.title,
+        style: new TextStyle(
+          color: Colors.white.withOpacity(0.85)
+
+        ),
+      ),
+
+    );
+
+
   }
 
 
