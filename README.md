@@ -1,8 +1,11 @@
-# my_profile
+# My profile :man:
 
-A new Flutter project.
+#### A project made in flutter to practice animations.
 
-## Getting Started
+### Plugins
 
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+| Plugin | README |
+| ------ | ------ |
+| url_launcher | https://pub.dartlang.org/packages/url_launcher |
+
+![Buy](https://i.imgur.com/58fcX2g.gif)
